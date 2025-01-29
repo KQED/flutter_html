@@ -13,45 +13,19 @@ dependencies:
     sdk: flutter
   html: ">=0.15.0 <1.0.0"
   flutter_html:
-    git:
-      url: https://github.com/KQED/flutter_html.git
-      ref: allow-srcdoc-and-point-dependencies-to-kqed-repo
+    path: ../..
   flutter_html_audio:
-    git:
-      url: https://github.com/KQED/flutter_html.git
-      ref: allow-srcdoc-and-point-dependencies-to-kqed-repo
-      path: packages/flutter_html_audio
+    path: ../flutter_html_audio
   flutter_html_iframe:
-    git:
-      url: https://github.com/KQED/flutter_html.git
-      ref: allow-srcdoc-and-point-dependencies-to-kqed-repo
-      path: packages/flutter_html_iframe
+    path: ../flutter_html_iframe
   flutter_html_math:
-    git:
-      url: https://github.com/KQED/flutter_html.git
-      ref: allow-srcdoc-and-point-dependencies-to-kqed-repo
-      path: packages/flutter_html_math
+    path: ../flutter_html_math
   flutter_html_svg:
-    git:
-      url: https://github.com/KQED/flutter_html.git
-      ref: allow-srcdoc-and-point-dependencies-to-kqed-repo
-      path: packages/flutter_html_svg
+    path: ../flutter_html_svg
   flutter_html_table:
-    git:
-      url: https://github.com/KQED/flutter_html.git
-      ref: allow-srcdoc-and-point-dependencies-to-kqed-repo
-      path: packages/flutter_html_table
+    path: ../flutter_html_table
   flutter_html_video:
-    git:
-      url: https://github.com/KQED/flutter_html.git
-      ref: allow-srcdoc-and-point-dependencies-to-kqed-repo
-      path: packages/flutter_html_video
-
-dependency_overrides:
-  flutter_html:
-    git:
-      url: https://github.com/KQED/flutter_html.git
-      ref: allow-srcdoc-and-point-dependencies-to-kqed-repo
+    path: ../flutter_html_video
 
 dev_dependencies:
   flutter_test:
