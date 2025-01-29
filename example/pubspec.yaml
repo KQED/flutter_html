@@ -4,13 +4,11 @@ publish_to: none
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.17.0 <3.0.0'
+  sdk: ">=2.17.0 <3.0.0"
 
 dependencies:
   flutter_html:
-    path: ..
-  flutter_html_all:
-    path: ../packages/flutter_html_all
+    path: ../
   flutter:
     sdk: flutter
 
@@ -20,7 +18,6 @@ dev_dependencies:
   flutter_lints: ^2.0.1
 
 flutter:
-
   uses-material-design: true
 
   assets:
