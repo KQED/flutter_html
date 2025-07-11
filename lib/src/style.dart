@@ -561,10 +561,8 @@ class Style {
 extension _MarginRelativeValues on Margin {
   Margin? getRelativeValue(double remValue, double emValue) {
     double? calculatedValue = calculateRelativeValue(remValue, emValue);
-    if (calculatedValue != null) {
-      return Margin(calculatedValue);
-    }
-
+    return Margin(calculatedValue);
+  
     return null;
   }
 }
@@ -572,10 +570,8 @@ extension _MarginRelativeValues on Margin {
 extension _PaddingRelativeValues on HtmlPadding {
   HtmlPadding? getRelativeValue(double remValue, double emValue) {
     double? calculatedValue = calculateRelativeValue(remValue, emValue);
-    if (calculatedValue != null) {
-      return HtmlPadding(calculatedValue);
-    }
-
+    return HtmlPadding(calculatedValue);
+  
     return null;
   }
 }

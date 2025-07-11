@@ -14,7 +14,7 @@ const svgString = '''
 </svg>
 ''';
 final String svgEncoded = Uri.encodeFull(svgString);
-final svgBase64 = base64Encode(utf8.encode(svgString) as Uint8List);
+final svgBase64 = base64Encode(utf8.encode(svgString));
 
 class FakeAssetBundle extends Fake implements AssetBundle {
   @override

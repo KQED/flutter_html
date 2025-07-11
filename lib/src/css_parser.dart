@@ -671,10 +671,8 @@ Style? inlineCssToStyle(String? inlineStyle, OnCssParseError? errorHandler) {
     return declarationsToStyle(declarations["*"]!);
   } else if (errorHandler != null) {
     String? newCss = errorHandler.call(inlineStyle ?? "", errors);
-    if (newCss != null) {
-      return inlineCssToStyle(newCss, errorHandler);
+    return inlineCssToStyle(newCss, errorHandler);
     }
-  }
   return null;
 }
 
@@ -689,10 +687,8 @@ Map<String, Map<String, List<css.Expression>>> parseExternalCss(
     return DeclarationVisitor().getDeclarations(sheet);
   } else if (errorHandler != null) {
     String? newCss = errorHandler.call(css, errors);
-    if (newCss != null) {
-      return parseExternalCss(newCss, errorHandler);
+    return parseExternalCss(newCss, errorHandler);
     }
-  }
   return {};
 }
 

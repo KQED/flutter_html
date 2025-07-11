@@ -157,3 +157,6 @@ packages/**/pubspec_overrides.yaml
 /example/pubspec_overrides.yaml
 
 coverage/
+
+# FVM Version Cache
+.fvm/
