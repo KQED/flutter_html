@@ -36,7 +36,7 @@ class IframeWidget extends StatelessWidget {
     final givenHeight =
         double.tryParse(extensionContext.attributes['height'] ?? "");
 
-    Uri? srcUri;
+    final Uri srcUri;
     if (extensionContext.attributes['srcdoc'] != null) {
       srcUri = Uri.dataFromString(
         extensionContext.attributes['srcdoc'] ?? '',
@@ -54,10 +54,7 @@ class IframeWidget extends StatelessWidget {
         style: extensionContext.styledElement!.style,
         childIsReplaced: true,
         child: WebViewWidget(
-          controller: controller
-            ..loadRequest(
-                Uri.tryParse(extensionContext.attributes['src'] ?? "") ??
-                    Uri()),
+          controller: controller..loadRequest(srcUri),
           key: key,
           gestureRecognizers: {Factory(() => VerticalDragGestureRecognizer())},
         ),

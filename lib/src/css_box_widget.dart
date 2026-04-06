@@ -81,7 +81,8 @@ class CssBoxWidget extends StatelessWidget {
           child: top
               ? child
               : MediaQuery(
-                  data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+                  data: MediaQuery.of(context)
+                      .copyWith(textScaler: TextScaler.noScaling),
                   child: child,
                 ),
         ),
@@ -179,6 +180,7 @@ class CssBoxWidget extends StatelessWidget {
 }
 
 class _CSSBoxRenderer extends MultiChildRenderObjectWidget {
+  // ignore: prefer_const_constructors_in_immutables
   _CSSBoxRenderer({
     Key? key,
     required super.children,
@@ -769,7 +771,7 @@ extension Normalize on Dimension {
 
 double _calculateEmValue(Style style, BuildContext buildContext) {
   return (style.fontSize?.emValue ?? 16) *
-      MediaQuery.textScaleFactorOf(buildContext) *
+      MediaQuery.textScalerOf(buildContext).scale(1.0) *
       MediaQuery.of(buildContext).devicePixelRatio;
 }
 

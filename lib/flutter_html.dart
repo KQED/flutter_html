@@ -66,7 +66,7 @@ class Html extends StatefulWidget {
   Html.fromDom({
     Key? key,
     GlobalKey? anchorKey,
-    @required dom.Document? document,
+    required dom.Document? document,
     this.onLinkTap,
     this.onAnchorTap,
     this.extensions = const [],
@@ -84,7 +84,7 @@ class Html extends StatefulWidget {
   Html.fromElement({
     Key? key,
     GlobalKey? anchorKey,
-    @required this.documentElement,
+    required this.documentElement,
     this.onLinkTap,
     this.onAnchorTap,
     this.extensions = const [],
